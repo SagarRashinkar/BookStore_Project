@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./JS/validation.js"></script>
+    <script src="./JS/signIn_signUp.js"></script>
+    <script src="./Service/ajax_Service.js"></script>
+    <link rel="stylesheet" href="./CSS/signUp_page.css">
+    <title>BookStore Sign Up</title>
+</head>
+<body>
+    <div id="snackbar"></div>
+    <div class="parent">
+        <div class="logo-card">
+            <div class="image-parent">
+                <img src="./Assets/login_page.png" class="signup-logo" alt="login_page logo">
+                <div class="title">ONLINE BOOK SHOPPING</div>
+            </div>
+        </div>
+        <div class="signup-parent">
+            <form class="myform">
+                <div class="btns">
+                    <button class="loginBtn" type="button" onclick="login_Tab()">LOGIN</button>
+                    <button class="signupBtn" type="button" onclick="signUp_Tab()">SIGNUP</button>
+                </div>
+                <div class="signUp-Fields">
+                    <label class="mylabel" for="name">Full Name</label>
+                    <input class="ip-field" id="name" type="text" onchange="validateName()">
+                    <div class="error"><small class="nameError"></small></div>
+                    <label class="mylabel" for="email">Email id</label>
+                    <input class="ip-field" id="email" type="text" onchange="validateEmail()">
+                    <div class="error"><small class="emailError"></small></div>
+                    <label class="mylabel" for="password">Password</label>
+                    <input class="ip-field" id="pass" type="password" onchange="validatePassword()">
+                    <!-- <img src="./Assets/visibility.svg" class="showPass" alt="visibility_icon" onclick="show_SignUp_Pass()"> -->
+                    <div class="error"><small class="passError"></small></div>
+                    <label class="mylabel" for="mobile">Mobile Number</label>
+                    <input class="ip-field" id="mobile" type="number" onchange="validateMobile()">
+                    <div class="error"><small class="mobileError"></small></div>
+                    <button class="signup" type="button" onclick="checkFields()">Signup</button>
+                </div>
+                <div class="login-Fields">
+                    <label class="mylabel" for="email">Email id</label>
+                    <input class="ip-field" id="login-email" type="text" onchange="loginEmailValidation()">
+                    <div class="error"><small class="emailErr"></small></div>
+                    <label class="mylabel" for="password">Password</label>
+                    <input class="ip-field" id="login-pass" type="password" onchange="loginPasswordValidation()">
+                    <!-- <img src="./Assets/visibility.svg" class="showPass" alt="visibility_icon" onclick="show_Login_Pass()"> -->
+                    <div class="error">
+                        <small class="passErr"></small>
+                        <button class="forgot" type="button">Forgot Password?</button>
+                    </div>
+                    <button class="signup" type="button" onclick="login()">Login</button>
+                    <div class="orDiv"> <hr> OR <hr> </div>
+                    <div class="socialBtns">
+                        <button class="facebook" type="button">Facebook</button>
+                        <button class="google" type="button">Google</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

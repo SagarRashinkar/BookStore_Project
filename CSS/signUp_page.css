@@ -1,0 +1,260 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background: gainsboro;
+  overflow: hidden;
+}
+
+.parent {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 727px;
+  height: 425px;
+  opacity: 1;
+}
+.parent .logo-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  width: 624px;
+  height: 391px;
+  background: #F5F5F5 0% 0% no-repeat padding-box;
+  border-radius: 21px;
+  opacity: 1;
+}
+.parent .logo-card .image-parent {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 42px;
+  width: 245px;
+  height: 300px;
+}
+.parent .logo-card .signup-logo {
+  width: 245px;
+  height: 245px;
+  opacity: 1;
+  border-radius: 250%;
+}
+.parent .logo-card .title {
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  top: 20px;
+  font-size: 18px;
+  width: 245px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/******************************************************************************************************************/
+.signup-parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 336px;
+  width: 389px;
+  height: 425px;
+  background: #FFFFFF 0% 0% no-repeat padding-box;
+  box-shadow: 0px 5px 15px #00000029;
+  border: 1px solid #E4E4E4;
+  border-radius: 6px;
+  opacity: 1;
+}
+.signup-parent .myform {
+  width: 252px;
+  height: 350px;
+  background-color: #ffffff;
+}
+.signup-parent .btns {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.signup-parent .loginBtn {
+  font-family: "Roboto" sans-serif;
+  font-size: 20px;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+  width: 72px;
+  color: #878787;
+}
+.signup-parent .signupBtn {
+  font-family: "Roboto" sans-serif;
+  font-size: 20px;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+  color: #0A0102;
+  width: 90px;
+}
+.signup-parent .signUp-Fields {
+  display: block;
+  width: 100%;
+  height: 310px;
+  margin-top: 15px;
+}
+.signup-parent .login-Fields {
+  display: none;
+  margin-top: 28px;
+}
+.signup-parent .ip-field {
+  width: 244px;
+  height: 29px;
+  border: 1px solid #E2E2E2;
+  border-radius: 2px;
+  outline: none;
+  opacity: 1;
+}
+.signup-parent .showPass {
+  position: relative;
+  top: -26px;
+  left: 90%;
+  width: 16px;
+  cursor: pointer;
+}
+.signup-parent .signup {
+  background-color: #A03037;
+  font-family: "Roboto" sans-serif;
+  cursor: pointer;
+  border: none;
+  border-radius: 3px;
+  opacity: 1;
+  margin-top: 12px;
+  color: white;
+  outline: none;
+  width: 252px;
+  height: 29px;
+}
+.signup-parent .forgot {
+  position: relative;
+  float: right;
+  top: 2px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+}
+.signup-parent .error {
+  font-family: "Roboto" sans-serif;
+  height: 15px;
+  margin-bottom: 2px;
+}
+.signup-parent .mylabel {
+  font-family: "Roboto" sans-serif;
+  font-size: 14px;
+}
+.signup-parent .orDiv {
+  font-family: "Roboto" sans-serif;
+  font-weight: bold;
+  padding: 24px 0 24px 0;
+  font-size: 16px;
+  height: 18px;
+  display: flex;
+  justify-content: center;
+}
+.signup-parent .socialBtns {
+  display: flex;
+  justify-content: space-between;
+}
+.signup-parent .socialBtns .facebook {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 120px;
+  height: 29px;
+  border-radius: 3px;
+  opacity: 1;
+  color: white;
+  background: #4266B2;
+}
+.signup-parent .socialBtns .google {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 120px;
+  height: 29px;
+  border-radius: 3px;
+  opacity: 1;
+  background: #F5F5F5;
+}
+
+/************************************************* SnackBar Here ************************************************/
+#snackbar {
+  visibility: hidden;
+  min-width: 250px;
+  position: fixed;
+  bottom: 60px;
+  left: 50%;
+  margin-left: -125px;
+  background-color: #333;
+  padding: 16px;
+  border-radius: 8px;
+  color: white;
+  text-align: center;
+  z-index: 1;
+  font-size: 17px;
+}
+
+#snackbar.display {
+  visibility: visible;
+  animation: fadeIn 0.5s, fadeOut 0.5s 2.5s;
+}
+
+@keyframes fadeIn {
+  from {
+    bottom: 0px;
+    opacity: 0;
+  }
+  to {
+    bottom: 60px;
+    opacity: 1;
+  }
+}
+@keyframes fadeOut {
+  from {
+    bottom: 60px;
+    opacity: 1;
+  }
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
+}
+/************************************************* Media Query ***************************************************/
+@media only screen and (max-width: 400px) {
+  .myform {
+    height: 375px !important;
+  }
+
+  .logo-card {
+    display: none !important;
+  }
+
+  .signup-parent {
+    left: 0;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .signUp-Fields {
+    margin-top: 30px !important;
+  }
+
+  .signup {
+    margin-top: 25px !important;
+  }
+}
+
+/*# sourceMappingURL=signUp_page.css.map */
