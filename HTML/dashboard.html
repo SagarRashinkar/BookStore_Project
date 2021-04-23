@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../CSS/dashboard.css">
+    <script src="../Service/ajax_Service.js"></script>
+    <script src="../JS/dashboard.js"></script>
+    <title>BookStore Dashboard</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <img src="../Assets/education.svg" class="logo-image" alt="">
+            <div class="title">BookStore</div>
+        </div>
+        <input class="searchbar" type="text" name="search" placeholder="Search...">
+        <div class="btns-parent">
+            <div class="btn-one" onclick="showProfile()">
+                <img src="../Assets/person.svg" class="person-image">
+                <div class="person-text">Profile</div>
+            </div>
+            <div class="btn-two">
+                <img src="../Assets/supermarket.svg" class="cart-image">
+                <div class="cart-text">Cart</div>
+            </div>
+        </div>
+        <div class="dropdown">
+            <div>Welcome,</div>
+            <div id="loggedEmail"></div>
+            <button class="logoutBtn" onclick="logoutUser()">Logout</button>
+        </div>
+    </div>
+    <div class="books-count">
+        <div class="count-text">Books</div>
+        <div class="count" id="cnt"></div>
+    </div>
+    <div class="card-parent">
+        <div class="card-sub-parent" id="card-item"></div>
+    </div>
+</body>
+</html>
